@@ -168,49 +168,49 @@ var comunicacionBluetooth = {
     Activa el giro a la izquierda.
 */
     girarAIzquierda: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("E", true, false);
         comunicacionBluetooth.display("Girando <-");
     },
 /*
     Activa el giro a la derecha.
 */
     girarADerecha: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("D", true, false);
         comunicacionBluetooth.display("Girando ->");
     },
 /*
     Centra la dirección.
 */
     centrarDireccion: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("F", true, false);
         comunicacionBluetooth.display("Centrando dirección");
     },
 /*
     Activa el avance.
 */
     avanzar: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("A", true, false);
         comunicacionBluetooth.display("Avanzando");
     },
 /*
     Activa el retroceso.
 */
     retroceder: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("B3", true, false);
         comunicacionBluetooth.display("Retrocediendo");
     },
 /*
     Frena la marcha.
 */
     frenar: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("C", true, false);
         comunicacionBluetooth.display("Frenando");
     },
 /*
     Activa el zumbador.
 */
     tocarBocina: function() {
-        bluetoothSerial.write("A1", true, false);
+        bluetoothSerial.write("G", true, false);
         comunicacionBluetooth.display("Tocando bocina");
     },
 /*
