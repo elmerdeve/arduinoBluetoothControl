@@ -54,8 +54,7 @@ app.controller('MotionController', function($scope, $cordovaDeviceMotion, $ionic
     $ionicPlatform.ready(function() {
  
         //Start Watching method
-        $scope.startWatching = function() {     
- 
+        $scope.startWatching = function() {            
             // Device motion configuration
             $scope.watch = $cordovaDeviceMotion.watchAcceleration($scope.options);
  
@@ -97,9 +96,10 @@ app.controller('MotionController', function($scope, $cordovaDeviceMotion, $ionic
             // If measurement change is bigger then predefined deviation
             if (measurementsChange.x + measurementsChange.y + measurementsChange.z > $scope.options.deviation) {
                 $scope.stopWatching();  // Stop watching because it will start triggering like hell
-                console.log('Movimiento detectado'); // shake detected
+                console.log('Movimiento detectado, frenando.'); // shake detected
+                $scope.mensajeAcelerometro = "Movimiento detectado";
                 setTimeout($scope.startWatching(), 1000);  // Again start watching after 1 sex
- 
+                comunicacionBluetooth.frenar();
                 // Clean previous measurements after succesfull shake detection, so we can do it next time
                 $scope.previousMeasurements = { 
                     x: null, 

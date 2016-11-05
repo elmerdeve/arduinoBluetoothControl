@@ -43,7 +43,7 @@
       </ion-header-bar>
       <!-- Scope Bluetooth -->
       <ion-content>
-      <div class="comunicacionBluetooth">
+      <div class="comunicacionBluetooth" ng-controller="MotionController">
       <div class="row">        
             <div id="ui" class="button-bar">
                 <button id="connectButton" class="button ion-bluetooth button-positive">Connect</button>
@@ -61,7 +61,7 @@
             <textarea class="input-label" id="message" rows="4">Mensajes recibidos...</textarea>
           </label>
         </div>
-        <div class="col col-20" rowspan="4"><button id="luzButton" class="button button-energized ion-lightbulb"></button></div>
+        <div class="col col-20" rowspan="4"><!--<button id="luzButton" class="button button-energized ion-lightbulb">--></button></div>
       </div>
       <div class="row">
         <div class="col col-20"><button class="button icon-left button-calm ion-chevron-up" id="avanceButton"></button></div>
@@ -84,27 +84,34 @@
         <div class="col col-20"></div>
         <div class="col col-20"></div>
       </div>
-      </div>
+      <!--</div bluetooth>-->
       <!-- Scope Acelerómetro -->
-      <div ng-controller="MotionController">
+      <!--<div ng-controller="MotionController">-->
+        <div>
+            <!--
             <div class="list">
                 <label class="item item-input">
                     <span class="input-label">Frequency</span>
                     <input type="text" placeholder="0" ng-model="options.frequency">
                 </label>
             </div>
-            <div>
-              <button class="button button-full button-positive" ng-click="startWatching()">
+            -->
+            <div class="button-bar">
+              <button class="button ion-ios-speedometer button-positive" ng-click="startWatching()">
                 Activar
               </button>
-              <button class="button button-full button-positive" ng-click="stopWatching()">
+              <button class="button ion-ios-speedometer-outline button-positive" ng-click="stopWatching()">
                 Desctivar
               </button>
-            </div>        
+            </div>
+            <h2>{{mensajeAcelerometro}}</h2>
+            <!--
             <h2>X: {{measurements.x}}</h2>
             <h2>Y: {{measurements.y}}</h2>
             <h2>Z: {{measurements.z}}</h2>
-      </div>
+            -->
+        </div>
+      </div> 
       </ion-content>
       <ion-footer-bar class="bar bar-footer bar-dark">
         <h1 class="title">Rodriguez - Escobar - Funes</h1>

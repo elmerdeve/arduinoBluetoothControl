@@ -22,7 +22,7 @@ var comunicacionBluetooth = {
         connectButton.addEventListener('touchend', comunicacionBluetooth.manageConnection, false);
         testSendButton.addEventListener('touchend', comunicacionBluetooth.escribirMensaje, false);
         bocinaButton.addEventListener('touchend', comunicacionBluetooth.tocarBocina, false);
-        luzButton.addEventListener('touchend', comunicacionBluetooth.encenderLuz, false);
+        //luzButton.addEventListener('touchend', comunicacionBluetooth.encenderLuz, false);
         avanceButton.addEventListener('touchend', comunicacionBluetooth.avanzar, false);
         stopButton.addEventListener('touchend', comunicacionBluetooth.frenar, false);
         retrocesoButton.addEventListener('touchend', comunicacionBluetooth.retroceder, false);
@@ -189,14 +189,14 @@ var comunicacionBluetooth = {
     Activa el avance.
 */
     avanzar: function() {
-        bluetoothSerial.write("A", true, false);
+        bluetoothSerial.write("A4", true, false);
         comunicacionBluetooth.display("Avanzando");
     },
 /*
     Activa el retroceso.
 */
     retroceder: function() {
-        bluetoothSerial.write("B3", true, false);
+        bluetoothSerial.write("B", true, false);
         comunicacionBluetooth.display("Retrocediendo");
     },
 /*

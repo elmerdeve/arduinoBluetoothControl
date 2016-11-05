@@ -2,9 +2,9 @@
 <widget id="com.ionicframework.arduinobluetoothcontrol332868" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>arduinoBluetoothControl</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Proyecto Ionic - Arduino.
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
+  <author email="elmerdeve@gmail.com" href="http://www.elmerdeve.com/">
       Your Name Here
     </author>
   <content src="index.html"/>
@@ -46,4 +46,5 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
