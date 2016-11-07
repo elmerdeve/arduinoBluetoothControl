@@ -54,8 +54,9 @@ app.controller('MotionController', function($scope, $cordovaDeviceMotion, $ionic
     $ionicPlatform.ready(function() {
  
         //Start Watching method
-        $scope.startWatching = function() {            
+        $scope.startWatching = function() {
             // Device motion configuration
+            //comunicacionBluetooth.display("Acelerómetro activado.");
             $scope.watch = $cordovaDeviceMotion.watchAcceleration($scope.options);
  
             // Device motion initilaization
@@ -121,7 +122,7 @@ app.controller('MotionController', function($scope, $cordovaDeviceMotion, $ionic
     });
  
     $scope.$on('$ionicView.beforeLeave', function(){
-        $scope.watch.clearWatch(); // Turn off motion detection watcher
+        $scope.watch.clearWatch();
     });
 
 });
